@@ -1,6 +1,7 @@
 {
   "name": "react-mui-template",
   "version": "0.1.0",
+  "homepage": "https://github.com/rosealexander/react-mui-workshop/",
   "license": "MIT License (c) 2021 CSU Northridge ACM Student Chapter",
   "dependencies": {
     "@emotion/react": "11.5.0",
@@ -12,6 +13,8 @@
     "react-scripts": "4.0.3"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build"
   },
@@ -31,5 +34,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "3.2.3"
   }
 }
