@@ -12,8 +12,6 @@ and check out the [Getting Started](https://reactjs.org/docs/getting-started.htm
 MUI is a simple and customizable component library to build faster, beautiful, and more accessible React applications.
 MUI components follow the [Material Design](https://material.io/design/introduction) system.
 
-## Getting Started
-
 ### Requirements
 To get the most out of this workshop you should be comfortable programming with Javascript.
 You must have [Node.js](https://nodejs.org/en/) installed and make sure to [clone this repo](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
@@ -29,11 +27,12 @@ REACT_APP_OPENWEATHER_API_KEY=YOUR_API_KEY
 
 Each part of this workshop is seperated by branches in this repository.
 + [Part 1 - React + MUI baseline](https://github.com/rosealexander/react-mui-workshop/tree/part1-react+mui-baseline)
-+ [Part 2 - useContext and useState](https://github.com/rosealexander/react-mui-workshop/tree/Part2-useContext%26useState)
-+ [part 3 - useEffect and useMemo](https://github.com/rosealexander/react-mui-workshop/tree/Part3-useEffect+useMemo)
++ [Part 2 - useContext and useState hooks](https://github.com/rosealexander/react-mui-workshop/tree/part2-useContext%26useState)
++ [part 3 - Fetch API and useEffect hook](https://github.com/rosealexander/react-mui-workshop/tree/part3-useEffect+useMemo)
 + [part 4 - MUI component library](https://github.com/rosealexander/react-mui-workshop/tree/part4-MUI)
++ [part 5 - GitHub Pages](https://github.com/rosealexander/react-mui-workshop/tree/part5-GitHub-Pages)
 
-## Learn More
+### Learn More
 You can learn more about React and Material UI from the [React documentation](https://reactjs.org/) 
 and [MUI v5 documentation](https://mui.com/getting-started/installation/). To learn more about Material Design take a look at [material.io](https://material.io/design).
 
