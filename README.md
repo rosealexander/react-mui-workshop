@@ -1,4 +1,4 @@
-# Part 4 - Material UI (MUI)
+# Part 5 - GitHub Pages
 
 ### [Material UI](https://mui.com)
 
