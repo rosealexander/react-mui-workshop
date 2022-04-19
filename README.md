@@ -1,7 +1,3 @@
-# Part 1 - React + MUI baseline
-
-<hr />
-
 > **Part 1 - React + MUI baseline**
 + [Part 2 - useContext and useState hooks](https://github.com/rosealexander/react-mui-workshop/tree/part2-useContext%26useState)
 + [part 3 - Fetch API and useEffect hook](https://github.com/rosealexander/react-mui-workshop/tree/part3-useEffect+useMemo)
