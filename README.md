@@ -28,10 +28,10 @@ REACT_APP_OPENWEATHER_API_KEY=YOUR_API_KEY
 ### [Clone this project >](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 
 Each part of this workshop is seperated by branches in this repository.
-+ [Part 1 - React + MUI baseline](https://github.com/CSUN-ACM/react-mui-workshop/tree/part1-react+mui-baseline)
-+ [Part 2 - useContext and useState hooks](https://github.com/CSUN-ACM/react-mui-workshop/tree/Part2-useContext%26useState)
-+ [part 3 - Fetch API and useEffect hook](https://github.com/CSUN-ACM/react-mui-workshop/tree/Part3-Fetch+useEffect)
-+ [part 4 - MUI component library](https://github.com/CSUN-ACM/react-mui-workshop/tree/part4-MUI)
++ [Part 1 - React + MUI baseline](https://github.com/rosealexander/react-mui-workshop/tree/part1-react+mui-baseline)
++ [Part 2 - useContext and useState](https://github.com/rosealexander/react-mui-workshop/tree/Part2-useContext%26useState)
++ [part 3 - useEffect and useMemo](https://github.com/rosealexander/react-mui-workshop/tree/Part3-useEffect+useMemo)
++ [part 4 - MUI component library](https://github.com/rosealexander/react-mui-workshop/tree/part4-MUI)
 
 ## Learn More
 You can learn more about React and Material UI from the [React documentation](https://reactjs.org/) 
@@ -41,5 +41,5 @@ ___
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[license-shield]: https://img.shields.io/github/license/rosealexander/mui-redux-next-template.svg?style=for-the-badge
-[license-url]: https://github.com/rosealexander/mui-redux-next-template/blob/master/LICENSE
+[license-shield]: https://img.shields.io/github/license/rosealexander/react-mui-workshop.svg?style=for-the-badge
+[license-url]: https://github.com/rosealexander/react-mui-workshop/blob/master/LICENSE
