@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/react-mui-workshop/static/js/main.d2f1e6e0.chunk.js",
-    "main.js.map": "/react-mui-workshop/static/js/main.d2f1e6e0.chunk.js.map",
+    "main.js": "/react-mui-workshop/static/js/main.aa482b37.chunk.js",
+    "main.js.map": "/react-mui-workshop/static/js/main.aa482b37.chunk.js.map",
     "runtime-main.js": "/react-mui-workshop/static/js/runtime-main.681e41d5.js",
     "runtime-main.js.map": "/react-mui-workshop/static/js/runtime-main.681e41d5.js.map",
     "static/js/2.15b4bdb2.chunk.js": "/react-mui-workshop/static/js/2.15b4bdb2.chunk.js",
@@ -12,6 +12,6 @@
   "entrypoints": [
     "static/js/runtime-main.681e41d5.js",
     "static/js/2.15b4bdb2.chunk.js",
-    "static/js/main.d2f1e6e0.chunk.js"
+    "static/js/main.aa482b37.chunk.js"
   ]
 }
