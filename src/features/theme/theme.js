@@ -50,10 +50,14 @@ export const lightTheme = responsiveFontSizes(
                 textTransform: 'none',
             }
         },
-        props: {
-            MuiButtonBase: {
-                disableRipple: true,
-            }
+        breakpoints: {
+            values: {
+                xs: 0,
+                sm: 600,
+                md: 900,
+                lg: 1200,
+                xl: 1536,
+            },
         },
         shape: {
             borderRadius: 4,
@@ -114,10 +118,14 @@ export const darkTheme = responsiveFontSizes(
                 textTransform: 'none',
             }
         },
-        props: {
-            MuiButtonBase: {
-                disableRipple: true,
-            }
+        breakpoints: {
+            values: {
+                xs: 0,
+                sm: 600,
+                md: 900,
+                lg: 1200,
+                xl: 1536,
+            },
         },
         shape: {
             borderRadius: 4,
