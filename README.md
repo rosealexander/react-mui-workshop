@@ -1,11 +1,9 @@
-# Part 5 - GitHub Pages
+[![MIT License][license-shield]][license-url]
 
-<hr />
+# React + Cloudflare workshop
+![React + Material UI logos](./react_mui.png)
 
-+ [Part 1 - React + MUI baseline](https://github.com/rosealexander/react-mui-workshop/tree/part1-react+mui-baseline)
-+ [Part 2 - useContext and useState hooks](https://github.com/rosealexander/react-mui-workshop/tree/part2-useContext%26useState)
-+ [part 3 - Fetch API and useEffect hook](https://github.com/rosealexander/react-mui-workshop/tree/part3-useEffect+useMemo)
-+ [part 4 - MUI component library](https://github.com/rosealexander/react-mui-workshop/tree/part4-MUI)
-> **part 5 - GitHub Pages**
-
-<hr />
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[license-shield]: https://img.shields.io/github/license/rosealexander/react-mui-workshop.svg?style=for-the-badge
+[license-url]: https://github.com/rosealexander/react-mui-workshop/blob/master/LICENSE
