@@ -1,5 +1,4 @@
 import {AppBar, Avatar, Grid, Typography} from "@mui/material";
-import ThemeToggle from "./theme/ThemeToggle";
 
 const Header = () => {
     return (
@@ -40,7 +39,7 @@ const Header = () => {
                     </Grid>
                 </Grid>
                 <Grid item>
-                    <ThemeToggle />
+                    {/*add themeToggle here*/}
                 </Grid>
             </Grid>
         </AppBar>
