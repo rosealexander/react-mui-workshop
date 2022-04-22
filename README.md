@@ -3,8 +3,7 @@
 + [part 3 - Fetch API and useEffect hook](https://github.com/rosealexander/react-mui-workshop/tree/part3-useEffect+useMemo)
 + [part 4 - MUI component library](https://github.com/rosealexander/react-mui-workshop/tree/part4-MUI)
 + [part 5 - GitHub Pages](https://github.com/rosealexander/react-mui-workshop/tree/part5-GitHub-Pages)
-
-<hr />
+___
 
 ### Create React App
 This project was bootstrapped with [Create React App](https://create-react-app.dev/docs/getting-started), an opinionated 
@@ -50,10 +49,69 @@ and create a folder `build` that has all the files needed to run in a web browse
 - `/src/features/Layout.jsx` a container component wrapping our Header Footer and Body components.\
 - `/src/features/theme/theme.js` outlines the color scheme used in the MUI component library.
 
-### MUI configuration
+### App.js
 [Material UI](https://mui.com) (MUI) is a React component library styled using the
 [Material Design UI framework](https://material.io/design/introduction). MUI is configured in `App.js` by wrapping all
 other components within the ThemeProvider component. We can customize the MUI color scheme using the createTheme 
 function and passing our customized theme into ThemeProvider using the **theme** prop.
+```jsx
+// App.js
+import Layout from "./features/Layout";
+import {ThemeProvider} from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+import lightTheme from "./features/theme/theme";
+
+function App() {
+    return (
+            <ThemeProvider theme={lightTheme}>
+                <CssBaseline />
+                <Layout />
+            </ThemeProvider>
+    );
+}
+
+export default App;
+```
+___
+### Theme.js
+```jsx
+// theme.js
+import {createTheme, responsiveFontSizes} from "@mui/material";
+
+export const lightTheme = responsiveFontSizes(
+        createTheme({
+...
+```
+___
+```jsx
+// layout.jsx
+import Header from './Header';
+import Body from './Body'
+import Footer from "./Footer";
+import {Box, Container} from "@mui/material";
+
+const Layout = () => {
+    return (
+        <Container
+            maxWidth='xs'
+        >
+            <Box
+                display='flex'
+                flexDirection='column'
+                justifyContent='space-between'
+                height='100vh'
+                py={2}
+            >
+                <Header/>
+                <Body />
+                <Footer/>
+            </Box>
+        </Container>
+    )
+}
+
+export default Layout
+```
 
 > [continue to Part 2 - useContext and useState hooks](https://github.com/CSUN-ACM/react-mui-workshop/tree/Part2-useContext%26useState)
+___
