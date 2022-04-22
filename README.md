@@ -1,4 +1,5 @@
 [![MIT License][license-shield]][license-url]
+![CI/CD](https://github.com/rosealexander/react-mui-workshop/workflows/CI/CD/badge.svg)
 
 # React + Material UI workshop
 ![React + Material UI logos](./react_mui.png)
