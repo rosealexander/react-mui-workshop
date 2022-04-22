@@ -12,22 +12,28 @@ testing framework, preconfigured webpack and buildscripts and much more. To keep
 has been removed.
 
 ### Available Scripts
-In the project root directory, you can run:
+In the **project root directory**, you can run:
 
 #### `npm install`
 This is a npm command that installs all dependencies for this project that are listed in package.json.
 
 #### `npm start`
 This command has been added and configured for us by Create React App and will launch our app in development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 #### `npm run build`
 This command has also been provided to us by Create React App and will compile all of our .jsx into regular javascript 
 and create a folder `build` that has all the files needed to run in a web browser.
+___
+### Local dev environment
+- Go ahead and run `npm install` and then `npm start`.
+- Open [http://localhost:3000](http://localhost:3000) to view your React app in the browser.
+  The page will reload if you make edits, and you will also see any lint errors in the console.
+
+You should see your awesome React app loaded in the browser, which is just going to be a blank white screen at the 
+moment. Keep this window open as we make edits in the following steps.
 
 ###  Project layout
+Here is what our current project layout looks like:
 * [/public ⧉](https://create-react-app.dev/docs/using-the-public-folder/)
   * acm_logo.png
   * favicon.ico
@@ -43,17 +49,23 @@ and create a folder `build` that has all the files needed to run in a web browse
       * theme.js
   * index.js
   
-- `/public/index.html`  is the page template\
-- `/app.js` is a component that acts as a container for all other components.\
-- `/src/index.js` is the JavaScript entry point\
-- `/src/features/Layout.jsx` a container component wrapping our Header Footer and Body components.\
+- `/public` contains HTML and can also hold images and files
+- `/public/index.html` the page template.
+- `/src` where we will keep all of our source code.
+- `/src/app.js` a component that acts as a container for all other components.
+- `/src/features` directory to keep all our UI features
+- `/src/features/Layout.jsx` a container component wrapping our Header, Footer and Body components.
 - `/src/features/theme/theme.js` outlines the color scheme used in the MUI component library.
+- `/src/index.js` is the JavaScript entry point and contains the logic for rendering the **App** component.
 
 ### App.js
 [Material UI](https://mui.com) (MUI) is a React component library styled using the
-[Material Design UI framework](https://material.io/design/introduction). MUI is configured in `App.js` by wrapping all
-other components within the ThemeProvider component. We can customize the MUI color scheme using the createTheme 
-function and passing our customized theme into ThemeProvider using the **theme** prop.
+[Material Design UI framework](https://material.io/design/introduction). 
+MUI is configured in `App.js` by wrapping all
+other components within a `<ThemeProvider />` component. We are going to use a custom theme by importing and passing 
+**lightTheme** to the ThemeProvider's **theme** prop.
+
+Replace App.js with the following:
 ```jsx
 // App.js
 import Layout from "./features/Layout";
@@ -72,8 +84,14 @@ function App() {
 
 export default App;
 ```
+- `<CssBaseline />`
+is a component provided by MUI that normalizes css styling across devices and browsers. 
+[https://mui.com/material-ui/react-css-baseline/](https://mui.com/material-ui/react-css-baseline/)
+- `<Layout />` is a component that created and are going to use to structure our web apps page layout.
 ___
 ### Theme.js
+Take a look at `/src/features/theme/theme.js`. When we added `lightTheme` earlier to `<ThemeProvider/>`, it was 
+exported from `theme.js`. **lightTheme*** is a custom theme that we have defined by using MUI's `createTheme()`.
 ```jsx
 // theme.js
 import {createTheme, responsiveFontSizes} from "@mui/material";
@@ -82,9 +100,16 @@ export const lightTheme = responsiveFontSizes(
         createTheme({
 ...
 ```
+- `createTheme` allows us to define a custom theme that we can provide to **ThemeProvider** like we did earlier. \
+[https://mui.com/material-ui/customization/theming/](https://mui.com/material-ui/customization/theming/)
+- `responsiveFontSizes` makes it so that our theme will scale font size based on browser window size. \
+[https://mui.com/material-ui/customization/typography/#responsive-font-sizes](https://mui.com/material-ui/customization/typography/#responsive-font-sizes)
 ___
+### Layout.jsx
+We will cover MUI more in depth in [part&nbsp;4](https://github.com/rosealexander/react-mui-workshop/tree/part4-MUI)
+but for now, lets replace Layout.jsx with the following and see what it does. 
 ```jsx
-// layout.jsx
+// Layout.jsx
 import Header from './Header';
 import Body from './Body'
 import Footer from "./Footer";
@@ -109,9 +134,32 @@ const Layout = () => {
         </Container>
     )
 }
-
 export default Layout
 ```
+Now we can finally see something in our local dev environment.
+- `<Container />` is a core MUI component type that we can wrap around other components, in this case we are wrapping it 
+around everything inside the **Layout** component. Passing **xs** into the **maxWidth** prop restricts the component 
+width within the **xs** breakpoint defined in our custom theme.
+```js
+// theme.js
+export const lightTheme = responsiveFontSizes(
+...
+breakpoints: {
+    values: {
+        xs: 0,
+        sm: 600,
+        md: 900,
+        lg: 1200,
+        xl: 1536,
+    },
+},
+```
+- The `Header` and `Footer` components have already been defined for us so don't worry about these too much right now 
+and `Body` is just serving as a placeholder that we will revisit later during 
+[part&nbsp;4](https://github.com/rosealexander/react-mui-workshop/tree/part4-MUI).
+
+You should be seeing this at [http://localhost:3000](http://localhost:3000):
+![Part1 preview](./part1.jpg)
 
 > [continue to Part 2 - useContext and useState hooks](https://github.com/CSUN-ACM/react-mui-workshop/tree/Part2-useContext%26useState)
 ___
