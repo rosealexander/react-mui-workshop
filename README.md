@@ -36,9 +36,9 @@ You can follow along by checking out each of these branches.
 + [part 5 - GitHub Pages](https://github.com/rosealexander/react-mui-workshop/tree/part5-GitHub-Pages)
 
 ### Learn More
-You can learn more about React and Material UI from the [React documentation](https://reactjs.org/)
-and [MUI v5 documentation](https://mui.com/getting-started/installation/). \
-To learn more about Material Design take a look at [material.io](https://material.io/design).
+- You can learn more about React and Material UI from the [React documentation](https://reactjs.org/)
+and [MUI v5 documentation](https://mui.com/getting-started/installation/).
+- To learn more about Material Design take a look at [material.io](https://material.io/design).
 
 > [continue to Part 1 - React + MUI baseline](https://github.com/rosealexander/react-mui-workshop/tree/part1-react+mui-baseline) 
 
