@@ -4,6 +4,8 @@
 > # React + Material UI workshop
 ![React + Material UI logos](./react_mui.png)
 
+### Here is what we are building [https://rosealexander.github.io/react-mui-workshop/](https://rosealexander.github.io/react-mui-workshop/)
+
 ### React.js
 React is a JavaScript library for building user interfaces.
 You can find the React documentation [here](https://reactjs.org/docs)
@@ -20,9 +22,11 @@ if you want to follow along.
 
 You also need to grab a free API key from [OpenWeather](https://openweathermap.org/api).
 Create an account and navigate to [My Api Keys](https://home.openweathermap.org/api_keys)
-and generate an key named `react-mui-demo`
+and generate a key named `react-mui-demo`
 
-Each part of this workshop is seperated by branches in this repository.
+### Getting Started
+Each part of this workshop is seperated by branches in this repository. 
+You can follow along by checking out each of these branches.
 + [Part 1 - React + MUI baseline](https://github.com/rosealexander/react-mui-workshop/tree/part1-react+mui-baseline)
 + [Part 2 - useContext and useState hooks](https://github.com/rosealexander/react-mui-workshop/tree/part2-useContext%26useState)
 + [part 3 - Fetch API and useEffect hook](https://github.com/rosealexander/react-mui-workshop/tree/part3-useEffect+useMemo)
@@ -31,7 +35,8 @@ Each part of this workshop is seperated by branches in this repository.
 
 ### Learn More
 You can learn more about React and Material UI from the [React documentation](https://reactjs.org/)
-and [MUI v5 documentation](https://mui.com/getting-started/installation/). To learn more about Material Design take a look at [material.io](https://material.io/design).
+and [MUI v5 documentation](https://mui.com/getting-started/installation/). \
+To learn more about Material Design take a look at [material.io](https://material.io/design).
 
 > [Part 1 - React + MUI baseline](https://github.com/rosealexander/react-mui-workshop/tree/part1-react+mui-baseline)
 
