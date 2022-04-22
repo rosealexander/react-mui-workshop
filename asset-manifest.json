@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/react-mui-workshop/static/js/main.eb3f43bd.chunk.js",
-    "main.js.map": "/react-mui-workshop/static/js/main.eb3f43bd.chunk.js.map",
+    "main.js": "/react-mui-workshop/static/js/main.d2f1e6e0.chunk.js",
+    "main.js.map": "/react-mui-workshop/static/js/main.d2f1e6e0.chunk.js.map",
     "runtime-main.js": "/react-mui-workshop/static/js/runtime-main.681e41d5.js",
     "runtime-main.js.map": "/react-mui-workshop/static/js/runtime-main.681e41d5.js.map",
-    "static/js/2.2c561a73.chunk.js": "/react-mui-workshop/static/js/2.2c561a73.chunk.js",
-    "static/js/2.2c561a73.chunk.js.map": "/react-mui-workshop/static/js/2.2c561a73.chunk.js.map",
+    "static/js/2.15b4bdb2.chunk.js": "/react-mui-workshop/static/js/2.15b4bdb2.chunk.js",
+    "static/js/2.15b4bdb2.chunk.js.map": "/react-mui-workshop/static/js/2.15b4bdb2.chunk.js.map",
     "index.html": "/react-mui-workshop/index.html",
-    "static/js/2.2c561a73.chunk.js.LICENSE.txt": "/react-mui-workshop/static/js/2.2c561a73.chunk.js.LICENSE.txt"
+    "static/js/2.15b4bdb2.chunk.js.LICENSE.txt": "/react-mui-workshop/static/js/2.15b4bdb2.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.681e41d5.js",
-    "static/js/2.2c561a73.chunk.js",
-    "static/js/main.eb3f43bd.chunk.js"
+    "static/js/2.15b4bdb2.chunk.js",
+    "static/js/main.d2f1e6e0.chunk.js"
   ]
 }
