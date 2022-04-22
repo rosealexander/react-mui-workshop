@@ -4,7 +4,8 @@
 > # React + Material UI workshop
 ![React + Material UI logos](./react_mui.png)
 
-### Here is what we are building [https://rosealexander.github.io/react-mui-workshop/](https://rosealexander.github.io/react-mui-workshop/)
+### Here is what we are building 
+#### [https://rosealexander.github.io/react-mui-workshop/](https://rosealexander.github.io/react-mui-workshop/)
 
 ### React.js
 React is a JavaScript library for building user interfaces.
