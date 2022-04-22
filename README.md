@@ -6,6 +6,7 @@
 
 ### Here is what we are building 
 #### [https://rosealexander.github.io/react-mui-workshop/](https://rosealexander.github.io/react-mui-workshop/)
+___
 
 ### React.js
 React is a JavaScript library for building user interfaces.
@@ -39,7 +40,7 @@ You can learn more about React and Material UI from the [React documentation](ht
 and [MUI v5 documentation](https://mui.com/getting-started/installation/). \
 To learn more about Material Design take a look at [material.io](https://material.io/design).
 
-> [Part 1 - React + MUI baseline](https://github.com/rosealexander/react-mui-workshop/tree/part1-react+mui-baseline)
+> [continue to Part 1 - React + MUI baseline](https://github.com/rosealexander/react-mui-workshop/tree/part1-react+mui-baseline) 
 
 ___
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
