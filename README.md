@@ -6,7 +6,7 @@
 
 ___
 
-If you take another look at **theme.js** you will see that there is actually another theme beigne exported, **darkTheme**.
+If you take another look at **theme.js** you will see that we have a second theme named **darkTheme**.
 ```jsx
 // theme.js
 ...
@@ -16,8 +16,10 @@ export const darkTheme = responsiveFontSizes(
             mode: "dark",
 ...
 ```
-What we are going to do is create a theme toggle button to switch between light and dark modes. Head over to and open 
-**src/features/theme/ThemeToggle.jsx** and then add the following:
+What we are going to do is create a theme toggle button to switch between light and dark themes. 
+
+Open up 
+src/features/theme/**ThemeToggle.jsx** and add the following:
 ```jsx
 // ThemeToggle.jsx
 import {Switch} from "@mui/material";
@@ -30,10 +32,11 @@ const ThemeToggle = () => {
 
 export default ThemeToggle;
 ```
-`Switch` is a component provided by the MUI component library that we are going to use for our light/dark theme toggle 
+`<Switch />` is a component provided by the MUI component library that we are going to use for our light/dark theme toggle 
 button.
 
-Let put this in the **Header** component, so go ahead and open **sec/features/Header.jsx** and import **ThemeToggle**.
+Let put this in the **Header** component. Go ahead and open **sec/features/Header.jsx** and lets import the 
+**ThemeToggle** component.
 ```jsx
 // Header.jsx
 import {AppBar, Avatar, Grid, Typography} from "@mui/material";
@@ -66,10 +69,10 @@ If we still have our local dev environment running our Header component should l
 
 ![Toggle in the header](toggler.jpg)
 
-Awesome, we have a button that we can click on. But it doesn't do much right now. Lets hook up the logic we need so that
-it can switch between themes.
+Awesome, we have a button that we can click, but it doesn't do much else right now. Let's hook up the logic we need so 
+that it can switch between themes.
 ___
-## [UseState](https://reactjs.org/docs/hooks-reference.html#usestate)
+## [useState](https://reactjs.org/docs/hooks-reference.html#usestate)
 If we want to save any kind of loginc in our React app we have to use **useState**. It is 
 immutable meaning that whatever we store using **useState** cannot be changed directly, whatever it is that we are 
 storing will always need to be replaced.
@@ -173,10 +176,11 @@ that we can reference, so we say if checked then setTheme(**darkTheme**) else se
 If you take another look at the dev environment on [localhost:3000](http://localhost:3000) and click the ThemeToggle
 component you will see that it switches between **lightTheme** and **darkTheme**.
 ___
-## [UseContext](https://reactjs.org/docs/hooks-reference.html#usecontext)
-If we want to avoid Prop Drilling as we did before, we can use the **createContext** hook to help us pass **setTheme** 
-from **App.js** over to **ThemeToggle**. You can go ahead and remove the changes that we made to **Layout.jsx** and 
-**Header.jsx**. Next, replace **App.js** with the following:
+## [useContext](https://reactjs.org/docs/hooks-reference.html#usecontext)
+There is a better way.
+If we want to avoid prop drilling we can use the **createContext** hook to help us pass **setTheme** 
+from **App.js** to **ThemeToggle**. Remove the changes that we made to **Layout.jsx** and 
+**Header.jsx** and then replace **App.js** with the following:
 ```jsx
 // App.js
 import Layout from "./features/Layout";
@@ -202,22 +206,23 @@ function App() {
 
 export default App;
 ```
-**UseContext()** works like this: 
+The **UseContext()** hook works like this: 
 
 First, we call **CreateContext(initialValue)** and save it to some variable that we 
-export. In this case we did this:
+export. In our case, what we did is this:
 ```jsx 
 export const ThemeContext = createContext([]);
 ```
-Next, we use the `<ThemeContext.Provider value={someValue}>` to wrap the components that we want to allow access to
-**someValue**. In our case we want **Layout** and all of its children to have access to **setTheme()** which is what we 
-are doing here:
+Next, we use `<ThemeContext.Provider value={someValue}>` to wrap the components that we want to grant access to
+**someValue**. 
+
+We want **Layout** and all of its children to have access to **setTheme()** :
 ```jsx
 <ThemeContext.Provider value={setTheme}>
     <Layout />
 </ThemeContext.Provider>
 ```
-Open up **ThemeToggle.jsx** and replace with the following:
+Now, open up **ThemeToggle.jsx** and replace with the following:
 
 ```jsx
 // ThemeToggle.jsx
@@ -246,5 +251,7 @@ We import **ThemeContext** from **App.js** and use it in the **useContext** hook
 const setTheme = useContext(ThemeContext)
 ```
 Now we can use **setTheme** in **ThemeToggle** without having to pass it as props. Check that your toggle switch is 
-still working and continue to the next part.
-[part 3 - useEffect and useMemo hooks](https://github.com/rosealexander/react-mui-workshop/tree/part3-useEffect+useMemo)
+still working and continue to 
+[part 3](https://github.com/rosealexander/react-mui-workshop/tree/part3-useEffect+useMemo).
+
+>[part 3 - useEffect and useMemo hooks](https://github.com/rosealexander/react-mui-workshop/tree/part3-useEffect+useMemo)
