@@ -1,8 +1,7 @@
-[![MIT License][license-shield]][license-url]
+[![MIT License][license-shield]][license-url] \
 ![CI/CD](https://github.com/rosealexander/react-mui-workshop/actions/workflows/main.yml/badge.svg)
 
-
-# React + Material UI workshop
+> # React + Material UI workshop
 ![React + Material UI logos](./react_mui.png)
 
 ### React.js
@@ -19,13 +18,9 @@ To get the most out of this workshop you should be comfortable programming with 
 You must have [Node.js](https://nodejs.org/en/) installed and make sure to [clone this repo](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 if you want to follow along.
 
-You also need to grab a Free API key from [OpenWeather](https://openweathermap.org/api).
-Create an account and navigate to [My Api Keys](https://home.openweathermap.org/api_keys).
-Generate an api key called "react-mui-demo" or something like that.
-You will need to add this api key to the .env file included on this page
-REACT_APP_OPENWEATHER_API_KEY=YOUR_API_KEY
-
-### [Clone this project >](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+You also need to grab a free API key from [OpenWeather](https://openweathermap.org/api).
+Create an account and navigate to [My Api Keys](https://home.openweathermap.org/api_keys)
+and generate an key named `react-mui-demo`
 
 Each part of this workshop is seperated by branches in this repository.
 + [Part 1 - React + MUI baseline](https://github.com/rosealexander/react-mui-workshop/tree/part1-react+mui-baseline)
@@ -38,9 +33,9 @@ Each part of this workshop is seperated by branches in this repository.
 You can learn more about React and Material UI from the [React documentation](https://reactjs.org/)
 and [MUI v5 documentation](https://mui.com/getting-started/installation/). To learn more about Material Design take a look at [material.io](https://material.io/design).
 
-___
+> [Part 1 - React + MUI baseline](https://github.com/rosealexander/react-mui-workshop/tree/part1-react+mui-baseline)
 
-<!-- MARKDOWN LINKS & IMAGES -->
+___
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [license-shield]: https://img.shields.io/github/license/rosealexander/react-mui-workshop.svg?style=for-the-badge
 [license-url]: https://github.com/rosealexander/react-mui-workshop/blob/master/LICENSE
