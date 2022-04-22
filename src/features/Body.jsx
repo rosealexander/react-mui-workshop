@@ -1,7 +1,4 @@
 
-const Body = () => {
-
-    return null
-};
+const Body = () => null
 
 export default Body;
