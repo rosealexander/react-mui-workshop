@@ -16,13 +16,13 @@ const Footer = () => {
                         color="textSecondary"
                         display='inline'
                     >
-                        MIT License (c) 2021 CSUN ACM
+                        MIT License (c) 2022 Alexander Rose
                     </Typography>
                 </Grid>
                 <Grid item>
                     <a
                         target="_blank"
-                        href="https://github.com/CSUN-ACM/react-mui-workshop"
+                        href="https://github.com/rosealexander/react-mui-workshop"
                         rel="noreferrer"
                     >
                         <IconButton>
