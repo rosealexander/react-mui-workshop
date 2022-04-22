@@ -16,7 +16,7 @@ const Footer = () => {
                         color="textSecondary"
                         display='inline'
                     >
-                        MIT License (c) 2021 CSUN ACM
+                        MIT License (c) 2022
                     </Typography>
                 </Grid>
                 <Grid item>
