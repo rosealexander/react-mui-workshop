@@ -2,7 +2,6 @@
 > **Part 2 - useContext and useState hooks**
 + [part 3 - useEffect and useMemo hooks](https://github.com/rosealexander/react-mui-workshop/tree/part3-useEffect+useMemo)
 + [part 4 - MUI component library](https://github.com/rosealexander/react-mui-workshop/tree/part4-MUI)
-+ [part 5 - GitHub Pages](https://github.com/rosealexander/react-mui-workshop/tree/part5-GitHub-Pages)
 
 ___
 
