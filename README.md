@@ -157,8 +157,8 @@ breakpoints: {
 and `Body` is just serving as a placeholder that we will revisit later during 
 [part&nbsp;4](https://github.com/rosealexander/react-mui-workshop/tree/part4-MUI).
 
-You should be seeing this at [http://localhost:3000](http://localhost:3000):
+You should be seeing this at [http://localhost:3000](http://localhost:3000): \
 ![Part1 preview](./part1.jpg)
 
-> [continue to Part 2 - useState and useContext hooks](https://github.com/CSUN-ACM/react-mui-workshop/tree/Part2-useContext%26useState)
+> [continue to Part 2 - useState and useContext hooks](https://github.com/rosealexander/react-mui-workshop/tree/Part2-useContext%26useState)
 ___
