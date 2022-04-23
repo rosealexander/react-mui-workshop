@@ -19,8 +19,6 @@ const Body =() => {
         fetchWeather(91330).then()
     }, []);
 
-    console.log(weatherData)
-
     return null;
 };
 
