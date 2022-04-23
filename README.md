@@ -78,7 +78,7 @@ export default Body;
 ```
 Open up your browser's dev tools and reload the page to see the requested data in your browsers console.
 
-### [useMemo](https://reactjs.org/docs/hooks-reference.html#usememo)
+### [useMemo*](https://reactjs.org/docs/hooks-reference.html#usememo)
 Notice how clicking on the **ThemeToggle** button we created causes us to make an additional api call to open weather.
 This is because **useEffect** changing calling **setTheme** in App.js is re-running effects in children components.
 To avoid this, we can use another hook, **useMemo**.
@@ -96,12 +96,34 @@ useMemo(() => {
 }, []);
 ...
 ```
-Now try switching between dark and light mode and notice that we arnt making unnecessary api calls to OpenWeather 
-anymore. 
+Now try switching between dark and light mode and notice that we aren't making any unnecessary api calls to OpenWeather.
 
-I want to mention, with [React.memo](https://reactjs.org/docs/react-api.html#reactmemo)
-we can accomplish the same thing while still using **useEffect**. We are not going to cover 
-[higher order components](https://reactjs.org/docs/higher-order-components.html) at this time, but you are 
-encouraged reference the [React API documentation](https://reactjs.org/docs/react-api.html) for more information.
+The last thing that we need to do is to save our weather data with **useState** and **Body.jsx** should look like this:
+
+```jsx
+import {useEffect, useState} from "react";
+
+const fetchWeather = async (areaCode) => {
+    const openWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?zip=${areaCode}&units=imperial&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}`
+    res = await fetch(openWeatherUrl)
+    return res.json()
+};
+
+const Body =() => {
+    const [weatherData, setWeatherData] = useState({})
+    
+    useMemo(() => {
+        fetchWeather(91330).then(data => {setWeatherData(data)})
+    }, []);
+    
+    return null;
+};
+
+export default Body;
+```
+
+*\* We might also use [React.memo](https://reactjs.org/docs/react-api.html#reactmemo), however we're not covering 
+[higher order components](https://reactjs.org/docs/higher-order-components.html) at this time. You are encouraged 
+to reference the [React API documentation](https://reactjs.org/docs/react-api.html) for more information.*
 
 > [part 4 - MUI component library](https://github.com/rosealexander/react-mui-workshop/tree/part4-MUI)
