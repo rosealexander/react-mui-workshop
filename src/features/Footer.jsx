@@ -22,7 +22,7 @@ const Footer = () => {
                 <Grid item>
                     <a
                         target="_blank"
-                        href="https://github.com/CSUN-ACM/react-mui-workshop"
+                        href="https://github.com/rosealexander/react-mui-workshop"
                         rel="noreferrer"
                     >
                         <IconButton>
