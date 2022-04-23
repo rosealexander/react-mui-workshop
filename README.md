@@ -1,5 +1,5 @@
 + [Part 1 - React + MUI baseline](https://github.com/rosealexander/react-mui-workshop/tree/part1-react+mui-baseline)
-> **Part 2 - useContext and useState hooks**
+> **Part 2 - useState and useContext hooks**
 + [part 3 - useEffect and useMemo hooks](https://github.com/rosealexander/react-mui-workshop/tree/part3-useEffect+useMemo)
 + [part 4 - MUI component library](https://github.com/rosealexander/react-mui-workshop/tree/part4-MUI)
 
