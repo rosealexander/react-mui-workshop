@@ -1,8 +1,8 @@
 {
-  "name": "react-mui-template",
+  "name": "react-mui-workshop",
   "version": "0.1.0",
   "homepage": "https://rosealexander.github.io/react-mui-workshop",
-  "license": "MIT License (c) 2021 CSU Northridge ACM Student Chapter",
+  "license": "MIT License (c) 2022 Alexander Rose",
   "dependencies": {
     "@emotion/react": "11.5.0",
     "@emotion/styled": "11.3.0",
