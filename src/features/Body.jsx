@@ -1,9 +1,10 @@
-import {memo, useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 
-const Body = memo( () => {
+const Body =() => {
     const [weatherData, setWeatherData] = useState({})
 
-    const fetchWeather = async (areaCode) => {
+    const fetchWeather = async () => {
+        const areaCode = 91330
         const openWeatherApi = `https://api.openweathermap.org/data/2.5/weather?zip=${areaCode}&units=imperial&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}`
         await fetch(openWeatherApi)
             .then(async (res) => {
@@ -20,8 +21,7 @@ const Body = memo( () => {
 
     console.log(weatherData)
 
-
     return null;
-});
+};
 
 export default Body;
