@@ -1,10 +1,9 @@
 > **Part 1 - React + MUI template**
-+ [Part 2 - useState and useContext hooks](https://github.com/rosealexander/react-mui-workshop/tree/part2-useContext%26useState)
-+ [part 3 - fetch API and useEffect hook](https://github.com/rosealexander/react-mui-workshop/tree/part3-useEffect)
-+ [part 4 - MUI component library](https://github.com/rosealexander/react-mui-workshop/tree/part4-MUI)
++ [Part 2 - useState and useContext hooks](https://github.com/rosealexander/react-mui-workshop/tree/part2)
++ [part 3 - fetch API and useEffect hook](https://github.com/rosealexander/react-mui-workshop/tree/part3)
++ [part 4 - MUI component library](https://github.com/rosealexander/react-mui-workshop/tree/part4)
 ___
 
-### Create React App
 This project was bootstrapped with [Create React App](https://create-react-app.dev/docs/getting-started), an opinionated 
 toolkit for creating react applications that's bundled with features including a local development server, 
 testing framework, preconfigured webpack and buildscripts and much more. To keep things simple, the testing framework 
@@ -17,7 +16,7 @@ In the **project root directory**, you can run:
 This is a npm command that installs all dependencies for this project that are listed in package.json.
 
 #### `npm start`
-This command has been added and configured for us by Create React App and will launch our app in development mode.\
+This command has been added and configured for us by Create React App and will launch our app in development mode.
 
 #### `npm run build`
 This command has also been provided to us by Create React App and will compile all of our .jsx into regular javascript 
@@ -160,12 +159,5 @@ and `Body` is just serving as a placeholder that we will revisit later during
 You should be seeing this at [http://localhost:3000](http://localhost:3000): \
 ![Part1 preview](./part1.jpg)
 
-> [Part 2 - useState and useContext hooks](https://github.com/rosealexander/react-mui-workshop/tree/part2-useContext%26useState)
-___
-
-![CSUN ACM Logo <](./acm_logo.png)
-*This workshop has been put together for the ACM California State University Northridge Student Chapter.*
-- [https://csunacm.org](https://csunacm.org)
-- [https://www.acm.org](https://www.acm.org)
-- [https://www.csun.edu/engineering-computer-science/computer-science](https://www.csun.edu/engineering-computer-science/computer-science)
+> [Part 2 - useState and useContext hooks](https://github.com/rosealexander/react-mui-workshop/tree/part2)
 ___
