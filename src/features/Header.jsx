@@ -1,5 +1,5 @@
 import ThemeToggle from "./theme/ThemeToggle";
-import {AppBar, Avatar, Grid, Icon, IconButton, Typography} from "@mui/material";
+import {AppBar, Grid, IconButton, Typography} from "@mui/material";
 import {SiMaterialui, SiReact} from "react-icons/si";
 
 const Header = () => {
