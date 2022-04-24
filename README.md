@@ -151,5 +151,5 @@ export default Body;
 ```
 
 
-> #### Use `git checkout part4` [to continue to part 4 - MUI](https://github.com/rosealexander/react-mui-workshop/tree/part4)
+> #### Use `git checkout part4` [to continue onto part 4 - MUI](https://github.com/rosealexander/react-mui-workshop/tree/part4)
 ___
