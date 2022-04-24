@@ -255,3 +255,12 @@ still working and continue to
 [part 3](https://github.com/rosealexander/react-mui-workshop/tree/part3-useEffect).
 
 >[part 3 - fetch API and useEffect hook](https://github.com/rosealexander/react-mui-workshop/tree/part3-useEffect)
+
+___
+
+![CSUN ACM Logo <](./acm_logo.png)
+*This workshop has been put together for the ACM California State University Northridge Student Chapter.*
+- [https://csunacm.org](https://csunacm.org)
+- [https://www.acm.org](https://www.acm.org)
+- [https://www.csun.edu/engineering-computer-science/computer-science](https://www.csun.edu/engineering-computer-science/computer-science)
+___
