@@ -34,7 +34,7 @@ export default ThemeToggle;
 `<Switch />` is a component provided by the MUI component library that we are going to use for our light/dark theme toggle 
 button.
 
-Let put this in the **Header** component. Go ahead and open **sec/features/Header.jsx** and lets import the 
+Let put this in the **Header** component. Go ahead and open **sec/features/Header.jsx** and import the 
 **ThemeToggle** component.
 ```jsx
 // Header.jsx
@@ -68,41 +68,42 @@ If we still have our local dev environment running our Header component should l
 
 ![Toggle in the header](toggler.jpg)
 
-Awesome, we have a button that we can click, but it doesn't do much else right now. Let's hook up the logic we need so 
-that it can switch between themes.
+Awesome, we have a button that we can click on, but it doesn't do much else right now. Let's hook up the logic we need 
+so that it will switch between themes.
 ___
 ## [useState](https://reactjs.org/docs/hooks-reference.html#usestate)
-If we want to save any kind of loginc in our React app we have to use **useState**. It is 
-immutable meaning that whatever we store using **useState** cannot be changed directly, whatever it is that we are 
-storing will always need to be replaced.
+To save any kind of persistent data in our React app we have to use **useState**. State is immutable in React, meaning 
+that whatever we store using **useState** cannot be changed directly. Whatever it is that we are storing will always 
+need to be replaced rather than updated.
 ```jsx
 const [state, setState] = useState(initState);
 ```
-This is the way useState operates, the function useState returns an array with two elements, **state** and **setState**.
-If you are unfamiliar with this syntax, what this is doing would be the same thing as something like this:
+**useState** returns an array with two elements, **state** and **setState**.
+If you are unfamiliar with this syntax, what's this happening is the same thing as this:
 ```js
 const myState = useState
 const state = myState[0]
-const useState = myState[0]
+const setState = myState[1]
 ```
-When we write it this way we are taking advantage of JavaScripts 
+Writing things this way takes advantage of JavaScripts 
 [Destructuring Assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
-feature, and this is also a React convention.
+feature, and is a React convention.
 
 `state` has the read only value of our state. \
-`setState` is a function that we use to replace said state.
+`setState` is a function that we use to replace said state. \
 `useState(initState)` allows us to provide an initial state.
 
-We can store any type of data in setState, however it is best to stick with one data type. So for example, lets say I 
+We can store any type of data in setState, however it is best to stick with one type of data. For example, lets say I 
 want to store an array in **useState()** I could do this.
 ```js
 const [array, setArray] = useState([])
 ```
-I intend to only store an Array in **array**, **setArray** so I make sure my initial value is also an empty Array.
+I intend to only store an Array in **array**, so I make sure my initial value is also an empty Array.
 Because JavaScript is loosely typed we won't need to worry about what type of data is actually in the array.
-If I want to update the read-only value of **array** I can do:
+
+If I want to update the read-only value of **array** I can do this:
 ```js
-setArray([1, 2, 3]) // array is now assigned [1,2,3]
+setArray([foo, bar, baz]) // Read only value of array is now assigned to be [foo, bar, baz]
 ```
 Open up **App.js** once again and add the following:
 ```jsx
@@ -113,17 +114,18 @@ function App() {
     const [theme, setTheme] = useState(lightTheme)
 ...
 ```
-Here we are saying that **lightTheme** is our initial theme. Next, lets change the value of the **ThemeProvider** 
- prop called **theme** to be our read-only **theme** value from **useState**.
+Here we are saying that **lightTheme** is our initial theme. Next, lets change the value of **ThemeProvider's** 
+ prop,  **theme** to be our **theme** value from **useState**.
 ```jsx
 <ThemeProvider theme={theme}>
 ```
-Nothing has really changed, **lightTheme** is still passed to **ThemeProvider**, but it's just passing 
-from **useState(lightTheme)**. Now if we call setTheme(someOtherTheme) we would update the value being passed to 
-**ThemeProvider** and this is exactly what we are going to do in our **ThemeToggle** component.
+Nothing has really changed, **lightTheme** is still passed to **ThemeProvider**, but now it's passing 
+from **useState(lightTheme)**. If we call setTheme(**someOtherTheme**) we would update the value being passed to 
+**ThemeProvider**, and this is exactly what we are going to do in our **ThemeToggle** component.
 
-Inorder to use **setTheme** in **ThemeToggle** we have to pass it through props. **setTheme** has to pass all the way 
-through **Layout&nbsp;→&nbsp;Header&nbsp;→&nbsp;ThemeToggle**. This is known as 
+To use **setTheme** in **ThemeToggle** we have to pass it through as props. **setTheme** has to pass all the way 
+from **Layout** to **Header** and finally into **ThemeToggle**. 
+**Layout&nbsp;→&nbsp;Header&nbsp;→&nbsp;ThemeToggle**. This is known as 
 [Prop Drilling](https://www.geeksforgeeks.org/what-is-prop-drilling-and-how-to-avoid-it/). 
 
 Add `setTheme={setTheme}` to `<Layout />` in **App.js**.
@@ -142,7 +144,7 @@ const Layout = ({setTheme}) => {
     <Header setTheme={setTheme}/>
 ...
 ```
-We are using the prop serTheme that we just had passed to **Layout** and are passing it again to our **Header** 
+We are using the prop setTheme that we just passed to **Layout** and are again passing it to the **Header** 
 component. Next, open up **Header.jsx** and do the same.
 ```jsx
 // Header.jsx
@@ -151,7 +153,8 @@ const Header = ({setTheme}) => {
     <ThemeToggle setTheme={setTheme}/>
 ...
 ```
-Finally, **setTheme** is available inside our **ThemeToggle** component. Replace **ThemeToggle.jsx** with the following:
+Finally, **setTheme** is available to use inside our **ThemeToggle** component. Replace **ThemeToggle.jsx** with the 
+following:
 ```jsx
 // ThemeToggle.jsx
 import {Switch} from "@mui/material";
@@ -171,16 +174,18 @@ const ThemeToggle = ({setTheme}) => {
 export default ThemeToggle;
 ```
 - `onChange` is a prop provided by the [Switch](https://mui.com/material-ui/api/switch/) component. Whenever it is 
-toggled it will provide two arguments to our function call `(event, checked) => ` 
-  - **checked** is a boolean value 
-that we can reference, so we say if checked then setTheme(**darkTheme**) else setTheme(**lightTheme**)
+toggled it will pass two arguments to our function call `(event, checked) => ` 
+  - **checked** is a boolean value that we may reference, so we say "if checked then setTheme(**darkTheme**) else 
+setTheme(**lightTheme**)."
 
 If you take another look at the dev environment on [localhost:3000](http://localhost:3000) and click the ThemeToggle
 component you will see that it switches between **lightTheme** and **darkTheme**.
 ___
 ## [useContext](https://reactjs.org/docs/hooks-reference.html#usecontext)
-There is a better way to do this. If we want to avoid prop drilling we can use the **createContext** hook to help us 
-pass **setTheme** from **App.js** to **ThemeToggle**. Remove the changes that we made to **Layout.jsx** and 
+There is a better way to do this. To avoid prop drilling we can use the **createContext** hook to help us 
+pass **setTheme** from **App.js** to **ThemeToggle**. 
+
+Remove the changes that we made to **Layout.jsx** and 
 **Header.jsx** and then replace **App.js** with the following:
 ```jsx
 import Layout from "./features/Layout";
@@ -206,17 +211,16 @@ function App() {
 
 export default App;
 ```
-The **UseContext()** hook works like this: 
+**useContext()** works like this: 
 
-First, we call **CreateContext(initialValue)** and save it to some variable that we 
-export. In our case, what we did is this:
+First, we call **createContext(initialValue)** and save it to some exported variable. 
 ```jsx 
 export const ThemeContext = createContext([]);
 ```
-Next, we use `<ThemeContext.Provider value={someValue}>` to wrap the components that we want to grant access to
+Next, use `<ThemeContext.Provider value={someValue}>` to wrap the components that you want to grant access to
 **someValue**. 
 
-We want **Layout** and all of its children to have access to **setTheme()** :
+To give **Layout** and all of its children access to **setTheme()**, do this:
 ```jsx
 <ThemeContext.Provider value={[theme, setTheme]}>
     <Layout />
@@ -246,12 +250,12 @@ const ThemeToggle = () => {
 
 export default ThemeToggle;
 ```
-We import **ThemeContext** from **App.js** and use it in the **useContext** hook like this.
+Import **ThemeContext** from **App.js** and use it in the **useContext** hook like this:
 ```jsx
 const setTheme = useContext(ThemeContext)
 ```
-Now we can use **setTheme** in **ThemeToggle** without having to pass it as props. Check that your toggle switch is 
-still working and continue to 
+Now we are using **setTheme** in **ThemeToggle** without having to pass it as props. Check that your toggle switch is 
+still working and continue onto 
 [part 3](https://github.com/rosealexander/react-mui-workshop/tree/part3).
 
 >[part 3 - fetch API and useEffect hook](https://github.com/rosealexander/react-mui-workshop/tree/part3)
