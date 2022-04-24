@@ -68,7 +68,7 @@ const fetchWeather = async (areaCode) => {
 const Body = () => {
     
     useEffect(() => {
-        fetchWeather(91330).then((data) => {console.log(data)})
+        fetchWeather(91330).then(data => console.log(data))
     }, []);
 
     return null;
