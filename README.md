@@ -258,6 +258,6 @@ Now we are using **setTheme** in **ThemeToggle** without having to pass it as pr
 still working and continue onto 
 [part 3](https://github.com/rosealexander/react-mui-workshop/tree/part3).
 
-> #### Use `git checkout part3` [to continue to part 3 - fetch API and useEffect hook](https://github.com/rosealexander/react-mui-workshop/tree/part3)
+> #### Use `git checkout part3` [to continue onto part 3 - fetch API and useEffect hook](https://github.com/rosealexander/react-mui-workshop/tree/part3)
 
 ___
