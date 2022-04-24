@@ -7,6 +7,7 @@ ___
 ___
 
 ```jsx
+// Body.jsx
 import {memo, useEffect, useState} from "react";
 import WeatherForm from "./WeatherForm";
 import {Grid, Paper} from "@mui/material";
