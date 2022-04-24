@@ -3,9 +3,19 @@
 > # React + Material UI workshop
 ![React + Material UI logos](./react_mui.png)
 
-### Here is what we are building 
-#### [https://rosealexander.github.io/react-mui-workshop/](https://rosealexander.github.io/react-mui-workshop/)
+### This is an introduction to using React with the Material UI component library. 
+### Here is what we are going to build: [https://rosealexander.github.io/react-mui-workshop/](https://rosealexander.github.io/react-mui-workshop/)
 ___
+
+![CSUN ACM Logo](./acm_logo.png)
+**This workshop has been put together for the ACM California State University Northridge 
+Student Chapter.**
+- [https://csunacm.org](https://csunacm.org)
+- [https://www.acm.org](https://www.acm.org)
+- [https://www.csun.edu/engineering-computer-science/computer-science](https://www.csun.edu/engineering-computer-science/computer-science)
+___
+
+## Introduction
 
 ### React.js
 React is a JavaScript library for building user interfaces.
