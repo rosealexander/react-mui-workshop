@@ -17,6 +17,7 @@ ___
 To get the most out of this workshop you should be comfortable programming with Javascript.
 You must have [Node.js](https://nodejs.org/en/) installed and make sure to 
 [clone this repo](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
+`git clone https://github.com/rosealexander/react-mui-workshop`
 
 You also need to grab a free API key from [OpenWeather](https://openweathermap.org/api).
 Create an account and navigate to [My Api Keys](https://home.openweathermap.org/api_keys)
@@ -46,7 +47,7 @@ MUI components follow the [Material Design](https://material.io/design/introduct
 - You can learn more about React from the [React documentation](https://reactjs.org/)
 and [MUI v5 documentation](https://mui.com/getting-started/installation/).
 - To learn more about Material Design take a look at [material.io](https://material.io/design).
-> [continue to Part 1 - React + MUI template](https://github.com/rosealexander/react-mui-workshop/tree/part1)
+> #### Use `git checkout part1` [to continue onto Part 1 - React + MUI template](https://github.com/rosealexander/react-mui-workshop/tree/part1)
 ___
 
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
