@@ -1,6 +1,6 @@
 import {memo, useEffect, useState} from "react";
-import WeatherForm from "./WeatherForm";
 import {Grid, Paper} from "@mui/material";
+import WeatherForm from "./WeatherForm";
 import WeatherDisplay from "./WeatherDisplay";
 
 const fetchWeather = async (areaCode) => {
