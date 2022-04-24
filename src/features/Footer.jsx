@@ -15,6 +15,7 @@ const Footer = () => {
                         variant="caption"
                         color="textSecondary"
                         display='inline'
+                        style={{userSelect: 'none'}}
                     >
                         MIT License (c) 2022 Alexander Rose
                     </Typography>
