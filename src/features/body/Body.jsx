@@ -15,28 +15,7 @@ const Body = memo(() => {
         fetchWeather(91330).then(data => setWeatherData(data))
     }, []);
 
-    return (
-        <Paper sx={{p:5}}>
-            <Grid
-                container
-                direction='column'
-                spacing={5}
-            >
-                <Grid item>
-                    <WeatherDisplay
-                        weatherData={weatherData}
-                    />
-                </Grid>
-                <Grid item>
-                    <WeatherForm
-                        setWeatherData={setWeatherData}
-                        fetchWeather={fetchWeather}
-                    />
-                </Grid>
-            </Grid>
-        </Paper>
-
-    );
+    return null
 });
 
 export default Body;
