@@ -23,28 +23,29 @@ Create an account and navigate to [My Api Keys](https://home.openweathermap.org/
 and generate a key named `react-mui-demo`
 
 ### Getting Started
-Each part of this workshop is seperated into branches. You can follow along by checking out each of them. 
+Each part of this workshop is seperated into branches. You can follow along by checking out each of them with 
 `git checkout [branch-name]`
-+ [Part 1 - React + MUI template](https://github.com/rosealexander/react-mui-workshop/tree/part1)
-+ [Part 2 - useState and useContext hooks](https://github.com/rosealexander/react-mui-workshop/tree/part2)
-+ [part 3 - fetch API and useEffect hook](https://github.com/rosealexander/react-mui-workshop/tree/part3)
-+ [part 4 - MUI component library](https://github.com/rosealexander/react-mui-workshop/tree/part4)
 
-### React.js
+- [Part 1 - React + MUI template](https://github.com/rosealexander/react-mui-workshop/tree/part1)
+- [Part 2 - useState and useContext hooks](https://github.com/rosealexander/react-mui-workshop/tree/part2)
+- [part 3 - fetch API and useEffect hook](https://github.com/rosealexander/react-mui-workshop/tree/part3)
+- [part 4 - MUI component library](https://github.com/rosealexander/react-mui-workshop/tree/part4)
+
+*For everything you need to know about Git, take a look at this [Git Guide](https://github.com/git-guides).*
+
+### [React.js](https://reactjs.org/docs)
 React is a JavaScript library for building user interfaces.
 You can find the React documentation [here](https://reactjs.org/docs)
 and check out the [Getting Started](https://reactjs.org/docs/getting-started.html) page for a quick overview.
 
-### Material UI
+### [Material UI](https://mui.com)
 MUI is a simple and customizable component library to build faster, beautiful, and more accessible React applications.
 MUI components follow the [Material Design](https://material.io/design/introduction) system.
-
 
 ### Learn More
 - You can learn more about React and Material UI from the [React documentation](https://reactjs.org/)
 and [MUI v5 documentation](https://mui.com/getting-started/installation/).
 - To learn more about Material Design take a look at [material.io](https://material.io/design).
-- For everything you need to know about Git, take a look at this [Git Guide](https://github.com/git-guides).
 > [continue to Part 1 - React + MUI template](https://github.com/rosealexander/react-mui-workshop/tree/part1)
 ___
 
