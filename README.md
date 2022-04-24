@@ -20,8 +20,8 @@ You must have [Node.js](https://nodejs.org/en/) installed and make sure to
 `git clone https://github.com/rosealexander/react-mui-workshop`
 
 You also need to grab a free API key from [OpenWeather](https://openweathermap.org/api).
-Create an account and navigate to [My Api Keys](https://home.openweathermap.org/api_keys)
-and generate a key named `react-mui-demo`
+Create an account and navigate to [Api Keys](https://home.openweathermap.org/api_keys)
+and just use the default one listed here later in this tutorial.
 
 ### Getting Started
 Each part of this workshop is seperated into branches. You can follow along by checking out each of them with 
