@@ -22,8 +22,6 @@ const WeatherForm = ({setWeatherData, fetchWeather}) => {
                     <TextField
                         required
                         fullWidth
-                        id="item-name-input"
-                        aria-describedby="my-helper-text"
                         value={zipCode}
                         onChange={event => setZipCode(event.target.value)}
                         autoComplete='off'
