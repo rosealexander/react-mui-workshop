@@ -149,3 +149,12 @@ export default Body;
 ```
 
 > [part 4 - MUI](https://github.com/rosealexander/react-mui-workshop/tree/part4-MUI)
+
+___
+
+![CSUN ACM Logo <](./acm_logo.png)
+*This workshop has been put together for the ACM California State University Northridge Student Chapter.*
+- [https://csunacm.org](https://csunacm.org)
+- [https://www.acm.org](https://www.acm.org)
+- [https://www.csun.edu/engineering-computer-science/computer-science](https://www.csun.edu/engineering-computer-science/computer-science)
+___
