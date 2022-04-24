@@ -159,5 +159,5 @@ You should be seeing this at [http://localhost:3000](http://localhost:3000):
 
 ![Part1 preview](./part1.jpg)
 
-> #### `use git checkout part2` [to continue to Part 2 - useState and useContext hooks](https://github.com/rosealexander/react-mui-workshop/tree/part2)
+> #### `use git checkout part2` [to continue onto Part 2 - useState and useContext hooks](https://github.com/rosealexander/react-mui-workshop/tree/part2)
 ___
