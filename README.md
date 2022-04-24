@@ -162,3 +162,10 @@ You should be seeing this at [http://localhost:3000](http://localhost:3000): \
 
 > [Part 2 - useState and useContext hooks](https://github.com/rosealexander/react-mui-workshop/tree/part2-useContext%26useState)
 ___
+
+![CSUN ACM Logo <](./acm_logo.png)
+*This workshop has been put together for the ACM California State University Northridge Student Chapter.*
+- [https://csunacm.org](https://csunacm.org)
+- [https://www.acm.org](https://www.acm.org)
+- [https://www.csun.edu/engineering-computer-science/computer-science](https://www.csun.edu/engineering-computer-science/computer-science)
+___
