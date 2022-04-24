@@ -160,5 +160,5 @@ and `Body` is just serving as a placeholder that we will revisit later during
 You should be seeing this at [http://localhost:3000](http://localhost:3000): \
 ![Part1 preview](./part1.jpg)
 
-> [continue to Part 2 - useState and useContext hooks](https://github.com/rosealexander/react-mui-workshop/tree/Part2-useContext%26useState)
+> [Part 2 - useState and useContext hooks](https://github.com/rosealexander/react-mui-workshop/tree/part2-useContext%26useState)
 ___
