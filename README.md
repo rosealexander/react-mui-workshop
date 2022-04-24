@@ -1,8 +1,8 @@
 # Part 4 - Material UI (MUI)
 ___
-+ [Part 1 - React + MUI template](https://github.com/rosealexander/react-mui-workshop/tree/part1-react+mui-template)
-+ [Part 2 - useContext and useState hooks](https://github.com/rosealexander/react-mui-workshop/tree/part2-useContext%26useState)
-+ [part 3 - fetch API and useEffect hook](https://github.com/rosealexander/react-mui-workshop/tree/part3-useEffect)
++ [Part 1 - React + MUI template](https://github.com/rosealexander/react-mui-workshop/tree/part1)
++ [Part 2 - useContext and useState hooks](https://github.com/rosealexander/react-mui-workshop/tree/part2)
++ [part 3 - fetch API and useEffect hook](https://github.com/rosealexander/react-mui-workshop/tree/part3)
 > **part 4 - MUI component library**
 ___
 The [MUI component library]() allows us to use many styled components right out of the box. Using a component library 
@@ -260,13 +260,4 @@ feel free to clone my [**react-mui-boilerplate**](https://github.com/rosealexand
   and [MUI v5 documentation](https://mui.com/getting-started/installation/).
 - To learn more about Material Design take a look at [material.io](https://material.io/design).
 - For everything you need to know about Git, take a look at this [Git Guide](https://github.com/git-guides).
-> [continue to Part 1 - React + MUI template](https://github.com/rosealexander/react-mui-workshop/tree/part1-react+mui-template)
-
-___
-
-![CSUN ACM Logo <](./acm_logo.png)
-*This workshop has been put together for the ACM California State University Northridge Student Chapter.*
-- [https://csunacm.org](https://csunacm.org)
-- [https://www.acm.org](https://www.acm.org)
-- [https://www.csun.edu/engineering-computer-science/computer-science](https://www.csun.edu/engineering-computer-science/computer-science)
 ___
