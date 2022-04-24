@@ -28,6 +28,7 @@ const Header = () => {
                                 <Grid item>
                                     <IconButton
                                         size='large'
+                                        style={{ backgroundColor: 'transparent' }}
                                         component='a'
                                         target="_blank"
                                         href="https://reactjs.org/"
@@ -40,6 +41,7 @@ const Header = () => {
                                     <Typography
                                         color='primary'
                                         fontWeight='Bold'
+                                        style={{userSelect: 'none'}}
                                     >
                                         +
                                     </Typography>
@@ -47,6 +49,7 @@ const Header = () => {
                                 <Grid item>
                                     <IconButton
                                         size='large'
+                                        style={{ backgroundColor: 'transparent' }}
                                         component='a'
                                         target="_blank"
                                         href="https://mui.com/"
