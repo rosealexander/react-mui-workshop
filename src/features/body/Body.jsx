@@ -1,6 +1,6 @@
 import {memo, useEffect, useState} from "react";
+import {Grid, Paper} from "@mui/material";
 import WeatherForm from "./WeatherForm";
-import {Box, Grid, Paper} from "@mui/material";
 import WeatherDisplay from "./WeatherDisplay";
 
 const fetchWeather = async (areaCode) => {
@@ -16,26 +16,24 @@ const Body = memo( () => {
     }, []);
 
     return (
-        <Paper>
-            <Box p={5}>
-                <Grid
-                    container
-                    direction='column'
-                    spacing={5}
-                >
-                    <Grid item>
-                        <WeatherDisplay
-                            weatherData={weatherData}
-                        />
-                    </Grid>
-                    <Grid item>
-                        <WeatherForm
-                            setWeatherData={setWeatherData}
-                            fetchWeather={fetchWeather}
-                        />
-                    </Grid>
+        <Paper sx={{p:5}}>
+            <Grid
+                container
+                direction='column'
+                spacing={5}
+            >
+                <Grid item>
+                    <WeatherDisplay
+                        weatherData={weatherData}
+                    />
                 </Grid>
-            </Box>
+                <Grid item>
+                    <WeatherForm
+                        setWeatherData={setWeatherData}
+                        fetchWeather={fetchWeather}
+                    />
+                </Grid>
+            </Grid>
         </Paper>
 
     );
