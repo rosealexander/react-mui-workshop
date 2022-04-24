@@ -28,7 +28,7 @@ and generate a key named `react-mui-demo`
 ### Getting Started
 Each part of this workshop is seperated by branches in this repository. 
 You can follow along by checking out each of these branches.
-+ [Part 1 - React + MUI baseline](https://github.com/rosealexander/react-mui-workshop/tree/part1-react+mui-baseline)
++ [Part 1 - React + MUI template](https://github.com/rosealexander/react-mui-workshop/tree/part1-react+mui-template)
 + [Part 2 - useState and useContext hooks](https://github.com/rosealexander/react-mui-workshop/tree/part2-useContext%26useState)
 + [part 3 - fetch API and useEffect hook](https://github.com/rosealexander/react-mui-workshop/tree/part3-useEffect)
 + [part 4 - MUI component library](https://github.com/rosealexander/react-mui-workshop/tree/part4-MUI)
@@ -38,7 +38,7 @@ You can follow along by checking out each of these branches.
 and [MUI v5 documentation](https://mui.com/getting-started/installation/).
 - To learn more about Material Design take a look at [material.io](https://material.io/design).
 
-> [continue to Part 1 - React + MUI baseline](https://github.com/rosealexander/react-mui-workshop/tree/part1-react+mui-baseline) 
+> [continue to Part 1 - React + MUI template](https://github.com/rosealexander/react-mui-workshop/tree/part1-react+mui-template) 
 
 ___
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
