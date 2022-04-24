@@ -1,6 +1,6 @@
 + [Part 1 - React + MUI baseline](https://github.com/rosealexander/react-mui-workshop/tree/part1-react+mui-baseline)
 + [Part 2 - useContext and useState hooks](https://github.com/rosealexander/react-mui-workshop/tree/part2-useContext%26useState)
-> **part 3 - useEffect hook**
+> **part 3 - fetch API and useEffect hook**
 + [part 4 - MUI](https://github.com/rosealexander/react-mui-workshop/tree/part4-MUI)
 ___
 We are going to use the API key we created from OpenWeather to fetch weather data for our web app.
