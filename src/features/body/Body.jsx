@@ -1,24 +1,23 @@
-import {memo, useEffect, useState} from "react";
+import {useMemo, useState} from "react";
 import WeatherForm from "./WeatherForm";
 import {Box, Grid, Paper} from "@mui/material";
 import WeatherDisplay from "./WeatherDisplay";
 
-const Body = memo( () => {
+const fetchWeather = async (areaCode) => {
+    const openWeatherApi = `https://api.openweathermap.org/data/2.5/weather?zip=${areaCode}&units=imperial&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}`
+    await fetch(openWeatherApi)
+        .then(async (res) => {
+            if (res.status === 200) {
+                return await res.json()
+            }
+        })
+};
+
+const Body = () => {
     const [weatherData, setWeatherData] = useState({})
 
-    const fetchWeather = async (areaCode) => {
-        const openWeatherApi = `https://api.openweathermap.org/data/2.5/weather?zip=${areaCode}&units=imperial&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}`
-        await fetch(openWeatherApi)
-            .then(async (res) => {
-                if (res.status === 200) {
-                    const data = await res.json()
-                    setWeatherData(data)
-                }
-            })
-    };
-
-    useEffect(() => {
-        fetchWeather(91330).then()
+    useMemo(() => {
+        fetchWeather(91330).then(data => {setWeatherData(data)})
     }, []);
 
 
@@ -46,6 +45,6 @@ const Body = memo( () => {
         </Paper>
 
     );
-});
+};
 
 export default Body;
