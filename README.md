@@ -26,8 +26,8 @@ Create an account and navigate to [My Api Keys](https://home.openweathermap.org/
 and generate a key named `react-mui-demo`
 
 ### Getting Started
-Each part of this workshop is seperated by branches in this repository. 
-You can follow along by checking out each of these branches.
+Each part of this workshop is seperated into branches. You can follow along by checking out each of them. 
+`git checkout [branch-name]`
 + [Part 1 - React + MUI template](https://github.com/rosealexander/react-mui-workshop/tree/part1-react+mui-template)
 + [Part 2 - useState and useContext hooks](https://github.com/rosealexander/react-mui-workshop/tree/part2-useContext%26useState)
 + [part 3 - fetch API and useEffect hook](https://github.com/rosealexander/react-mui-workshop/tree/part3-useEffect)
@@ -37,7 +37,7 @@ You can follow along by checking out each of these branches.
 - You can learn more about React and Material UI from the [React documentation](https://reactjs.org/)
 and [MUI v5 documentation](https://mui.com/getting-started/installation/).
 - To learn more about Material Design take a look at [material.io](https://material.io/design).
-
+- For everything you need to know about Git, take a look at this [Git Guide](https://github.com/git-guides).
 > [continue to Part 1 - React + MUI template](https://github.com/rosealexander/react-mui-workshop/tree/part1-react+mui-template) 
 
 ___
