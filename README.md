@@ -41,10 +41,6 @@ and [MUI v5 documentation](https://mui.com/getting-started/installation/).
 > [continue to Part 1 - React + MUI template](https://github.com/rosealexander/react-mui-workshop/tree/part1-react+mui-template) 
 
 ___
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[license-shield]: https://img.shields.io/github/license/rosealexander/react-mui-workshop.svg?style=for-the-badge
-[license-url]: https://github.com/rosealexander/react-mui-workshop/blob/master/LICENSE
-
 
 ![CSUN ACM Logo <](./acm_logo.png)
 *This workshop has been put together for the ACM California State University Northridge Student Chapter.*
@@ -52,3 +48,7 @@ ___
 - [https://www.acm.org](https://www.acm.org)
 - [https://www.csun.edu/engineering-computer-science/computer-science](https://www.csun.edu/engineering-computer-science/computer-science)
 ___
+
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[license-shield]: https://img.shields.io/github/license/rosealexander/react-mui-workshop.svg?style=for-the-badge
+[license-url]: https://github.com/rosealexander/react-mui-workshop/blob/master/LICENSE
