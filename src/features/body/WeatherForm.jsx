@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
-import {Button, FormControl, Grid, TextField} from "@mui/material";
+import {useState} from 'react';
+import {Button, Grid, TextField} from "@mui/material";
 
-const WeatherForm = ({fetchWeather}) => {
+const WeatherForm = ({setWeatherData, fetchWeather}) => {
     const [zipCode, setZipCode] = useState('')
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        fetchWeather(zipCode).then()
+        fetchWeather(zipCode).then(data => setWeatherData(data))
     }
 
     return (
@@ -19,21 +19,17 @@ const WeatherForm = ({fetchWeather}) => {
                 spacing={5}
             >
                 <Grid item>
-                    <FormControl
-                        fullWidth
+                    <TextField
                         required
-                    >
-                        <TextField
-                            required
-                            id="item-name-input"
-                            aria-describedby="my-helper-text"
-                            value={zipCode}
-                            onChange={event => setZipCode(event.target.value)}
-                            autoComplete='off'
-                            inputProps={{ maxLength: 5 }}
-                            label='Zip Code'
-                        />
-                    </FormControl>
+                        fullWidth
+                        id="item-name-input"
+                        aria-describedby="my-helper-text"
+                        value={zipCode}
+                        onChange={event => setZipCode(event.target.value)}
+                        autoComplete='off'
+                        inputProps={{ maxLength: 5 }}
+                        label='Zip Code'
+                    />
                 </Grid>
                 <Grid item>
                     <Button
