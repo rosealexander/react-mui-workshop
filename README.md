@@ -1,7 +1,7 @@
-+ [Part 1 - React + MUI template](https://github.com/rosealexander/react-mui-workshop/tree/part1-react+mui-template)
++ [Part 1 - React + MUI template](https://github.com/rosealexander/react-mui-workshop/tree/part1)
 > **Part 2 - useState and useContext hooks**
-+ [part 3 - fetch API and useEffect hook](https://github.com/rosealexander/react-mui-workshop/tree/part3-useEffect)
-+ [part 4 - MUI component library](https://github.com/rosealexander/react-mui-workshop/tree/part4-MUI)
++ [part 3 - fetch API and useEffect hook](https://github.com/rosealexander/react-mui-workshop/tree/part3)
++ [part 4 - MUI component library](https://github.com/rosealexander/react-mui-workshop/tree/part4)
 
 ___
 
@@ -252,15 +252,8 @@ const setTheme = useContext(ThemeContext)
 ```
 Now we can use **setTheme** in **ThemeToggle** without having to pass it as props. Check that your toggle switch is 
 still working and continue to 
-[part 3](https://github.com/rosealexander/react-mui-workshop/tree/part3-useEffect).
+[part 3](https://github.com/rosealexander/react-mui-workshop/tree/part3).
 
->[part 3 - fetch API and useEffect hook](https://github.com/rosealexander/react-mui-workshop/tree/part3-useEffect)
+>[part 3 - fetch API and useEffect hook](https://github.com/rosealexander/react-mui-workshop/tree/part3)
 
-___
-
-![CSUN ACM Logo <](./acm_logo.png)
-*This workshop has been put together for the ACM California State University Northridge Student Chapter.*
-- [https://csunacm.org](https://csunacm.org)
-- [https://www.acm.org](https://www.acm.org)
-- [https://www.csun.edu/engineering-computer-science/computer-science](https://www.csun.edu/engineering-computer-science/computer-science)
 ___
