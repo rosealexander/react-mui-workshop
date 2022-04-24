@@ -16,7 +16,9 @@ Inside this file, copy the following line and replace with your own OpenWeather 
 `REACT_APP_OPENWEATHER_API_KEY={YOUR API KEY}`
 
 Create React App can use `.env` files out of the box to keep global secrets. You must always prefix your environment 
-variable names with `REACT_APP` for them to be usable in your React application that was bootstrapped this way.
+variable names with `REACT_APP` for them to be usable in your React application that was bootstrapped this way. 
+
+Restart your local dev environment by exiting the command line and running `nmp start` again.
 
 ### [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 We will use the JavaScript fetch API to make a request to OpenWeather for some weather data. Open up **body.jsx** and
@@ -26,22 +28,20 @@ add the following function.
 // body.jsx
 const fetchWeather = async (areaCode) => {
     const openWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?zip=${areaCode}&units=imperial&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}`
-    res = await fetch(openWeatherUrl)
+    const res = await fetch(openWeatherUrl)
     return res.json()
 };
 
-const Body = () => {
+const Body =() => null
 ...
 ```
-Let's break down what's going on here:
-
 We are calling fetch, by default this makes a `GET` request to the url that we have provided. openWeatherUrl consists of
 our api key and an area code to return weather data from. fetch is an
 [async function,](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) so we 
-prefix its function call with **await**. Furthermore, because we are using await inside our fetchWeather function, we
-include **async** in our function signature. 
+prefix it with **await** and since we are using await inside **fetchWeather**, we include **async** in our function 
+signature. 
 
-Lastly, we use the built-in function **res.json()** to translate the body of this response to **json** and return it.
+Lastly, we use the built-in function **res.json()** to translate the body of this response into **JSON** and return it.
 
 ### [useEffect](https://reactjs.org/docs/hooks-reference.html#useeffect)
 We are going to call **fetchWeather** once the page loads for the first time. To do this, we need to use the 
@@ -61,7 +61,7 @@ import {useEffect} from "react";
 
 const fetchWeather = async (areaCode) => {
     const openWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?zip=${areaCode}&units=imperial&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}`
-    res = await fetch(openWeatherUrl)
+    const res = await fetch(openWeatherUrl)
     return res.json()
 };
 
@@ -101,11 +101,11 @@ Now try switching between dark and light mode and notice that we aren't making a
 The last thing that we need to do is to save our weather data with **useState** and **Body.jsx** should look like this:
 
 ```jsx
-import {useEffect, useState} from "react";
+import {useMemo, useState} from "react";
 
 const fetchWeather = async (areaCode) => {
     const openWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?zip=${areaCode}&units=imperial&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}`
-    res = await fetch(openWeatherUrl)
+    const res = await fetch(openWeatherUrl)
     return res.json()
 };
 
