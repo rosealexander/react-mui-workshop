@@ -1,7 +1,7 @@
 + [Part 1 - React + MUI baseline](https://github.com/rosealexander/react-mui-workshop/tree/part1-react+mui-baseline)
 + [Part 2 - useContext and useState hooks](https://github.com/rosealexander/react-mui-workshop/tree/part2-useContext%26useState)
-> **part 3 - useEffect and useMemo hooks**
-+ [part 4 - MUI component library](https://github.com/rosealexander/react-mui-workshop/tree/part4-MUI)
+> **part 3 - useEffect hook**
++ [part 4 - MUI](https://github.com/rosealexander/react-mui-workshop/tree/part4-MUI)
 ___
 We are going to use the API key we created from OpenWeather to fetch weather data for our web app.
 
@@ -78,30 +78,11 @@ export default Body;
 ```
 Open up your browser's dev tools and reload the page to see the requested data in your browsers console.
 
-### [useMemo*](https://reactjs.org/docs/hooks-reference.html#usememo)
-Notice how clicking on the **ThemeToggle** button we created causes us to make an additional api call to open weather.
-This is because **useEffect** changing calling **setTheme** in App.js is re-running effects in children components.
-To avoid this, we can use another hook, **useMemo**.
+Now lets save our weather data with **useState**. Replace **Body.jsx** with the following:
 
-**useMemo** acts almost identically to **useEffect**, however **useMemo** will only recompute when one of the 
-dependencies in the second argument have been changed. In this case, we passed an empty array, meaning no dependencies 
-so no need to recompute after initial page load.
-
-Replace useEffect with the useMemo:
 ```jsx
 // body.jsx
-...
-useMemo(() => {
-    fetchWeather(91330).then((data) => {console.log(data)})
-}, []);
-...
-```
-Now try switching between dark and light mode and notice that we aren't making any unnecessary api calls to OpenWeather.
-
-The last thing that we need to do is to save our weather data with **useState** and **Body.jsx** should look like this:
-
-```jsx
-import {useMemo, useState} from "react";
+import {useEffect, useState} from "react";
 
 const fetchWeather = async (areaCode) => {
     const openWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?zip=${areaCode}&units=imperial&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}`
@@ -109,21 +90,62 @@ const fetchWeather = async (areaCode) => {
     return res.json()
 };
 
-const Body =() => {
+const Body = () => {
     const [weatherData, setWeatherData] = useState({})
-    
-    useMemo(() => {
-        fetchWeather(91330).then(data => {setWeatherData(data)})
+    console.log(weatherData)
+
+    useEffect(() => {
+        fetchWeather(91330).then(data => setWeatherData(data))
     }, []);
-    
-    return null;
+
+    return null
 };
 
 export default Body;
 ```
 
-*\* We might also use [React.memo](https://reactjs.org/docs/react-api.html#reactmemo), however we're not covering 
-[higher order components](https://reactjs.org/docs/higher-order-components.html) at this time. You are encouraged 
-to reference the [React API documentation](https://reactjs.org/docs/react-api.html) for more information.*
+### [memo*](https://reactjs.org/docs/hooks-reference.html#memo)
+Notice how clicking on **ThemeToggle** causes an additional api call to OpenWeather.
+This is because changing our theme state in **App.js** is causing the **Body** component to rerender since it is a child
+component of App.js. To avoid this we can wrap the **Body** component in **memo**.
 
-> [part 4 - MUI component library](https://github.com/rosealexander/react-mui-workshop/tree/part4-MUI)
+[React.memo](https://reactjs.org/docs/react-api.html#reactmemo) is a 
+[higher order component](https://reactjs.org/docs/higher-order-components.html) and ensures that the **Body** component
+will only re-render if it has had some internal state change.
+
+Replace this line in **body.jsx**:
+```jsx
+// body.jsx
+...
+const Body = memo(() => {
+...
+});
+```
+Now try switching between dark and light mode and notice that we aren't making any unnecessary api calls to OpenWeather.
+
+Finally, body.jds should look like this:
+```jsx
+// body.jsx
+import {useEffect, useState} from "react";
+
+const fetchWeather = async (areaCode) => {
+    const openWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?zip=${areaCode}&units=imperial&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}`
+    const res = await fetch(openWeatherUrl)
+    return res.json()
+};
+
+const Body = () => {
+    const [weatherData, setWeatherData] = useState({})
+    console.log(weatherData)
+
+    useEffect(() => {
+        fetchWeather(91330).then(data => setWeatherData(data))
+    }, []);
+
+    return null
+};
+
+export default Body;
+```
+
+> [part 4 - MUI](https://github.com/rosealexander/react-mui-workshop/tree/part4-MUI)
