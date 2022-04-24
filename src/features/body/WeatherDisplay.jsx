@@ -1,4 +1,3 @@
-import React from 'react';
 import {Avatar, Grid, Typography} from "@mui/material";
 
 const WeatherDisplay = ({weatherData = {}}) => {
