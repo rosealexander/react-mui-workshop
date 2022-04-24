@@ -17,8 +17,7 @@ export const darkTheme = responsiveFontSizes(
 ```
 What we are going to do is create a theme toggle button to switch between light and dark themes. 
 
-Open up 
-src/features/theme/**ThemeToggle.jsx** and add the following:
+Open up **src/features/theme/ThemeToggle.jsx** and replace with the following:
 ```jsx
 // ThemeToggle.jsx
 import {Switch} from "@mui/material";
@@ -34,7 +33,7 @@ export default ThemeToggle;
 `<Switch />` is a component provided by the MUI component library that we are going to use for our light/dark theme toggle 
 button.
 
-Let put this in the **Header** component. Go ahead and open **sec/features/Header.jsx** and import the 
+Let put this in the **Header** component. Go ahead and open **src/features/Header.jsx** and import the 
 **ThemeToggle** component.
 ```jsx
 // Header.jsx
@@ -79,19 +78,20 @@ need to be replaced rather than updated.
 const [state, setState] = useState(initState);
 ```
 **useState** returns an array with two elements, **state** and **setState**.
-If you are unfamiliar with this syntax, what's this happening is the same thing as this:
+
+`state` has the read only value of our state. \
+`setState` is a function that we use to replace said state. \
+`useState(initState)` allows us to provide an initial state.
+
+If you are unfamiliar with this syntax, its is the same thing as saying:
 ```js
 const myState = useState
 const state = myState[0]
 const setState = myState[1]
 ```
-Writing things this way takes advantage of JavaScripts 
+*Writing things this way takes advantage of JavaScripts
 [Destructuring Assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
-feature, and is a React convention.
-
-`state` has the read only value of our state. \
-`setState` is a function that we use to replace said state. \
-`useState(initState)` allows us to provide an initial state.
+feature and is also a React convention.*
 
 We can store any type of data in setState, however it is best to stick with one type of data. For example, lets say I 
 want to store an array in **useState()** I could do this.
@@ -119,7 +119,7 @@ Here we are saying that **lightTheme** is our initial theme. Next, lets change t
 ```jsx
 <ThemeProvider theme={theme}>
 ```
-Nothing has really changed, **lightTheme** is still passed to **ThemeProvider**, but now it's passing 
+**lightTheme** is still passed to **ThemeProvider**, but now it's passing 
 from **useState(lightTheme)**. If we call setTheme(**someOtherTheme**) we would update the value being passed to 
 **ThemeProvider**, and this is exactly what we are going to do in our **ThemeToggle** component.
 
@@ -258,6 +258,6 @@ Now we are using **setTheme** in **ThemeToggle** without having to pass it as pr
 still working and continue onto 
 [part 3](https://github.com/rosealexander/react-mui-workshop/tree/part3).
 
->[part 3 - fetch API and useEffect hook](https://github.com/rosealexander/react-mui-workshop/tree/part3)
+> #### Use `git checkout part3` to continue to [part 3 - fetch API and useEffect hook](https://github.com/rosealexander/react-mui-workshop/tree/part3)
 
 ___
