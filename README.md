@@ -1,7 +1,7 @@
-+ [Part 1 - React + MUI template](https://github.com/rosealexander/react-mui-workshop/tree/part1-react+mui-template)
-+ [Part 2 - useContext and useState hooks](https://github.com/rosealexander/react-mui-workshop/tree/part2-useContext%26useState)
++ [Part 1 - React + MUI template](https://github.com/rosealexander/react-mui-workshop/tree/part1)
++ [Part 2 - useContext and useState hooks](https://github.com/rosealexander/react-mui-workshop/tree/part2)
 > **part 3 - fetch API and useEffect hook**
-+ [part 4 - MUI](https://github.com/rosealexander/react-mui-workshop/tree/part4-MUI)
++ [part 4 - MUI](https://github.com/rosealexander/react-mui-workshop/tree/part4)
 ___
 We are going to use the API key we created from OpenWeather to fetch weather data for our web app.
 
@@ -148,13 +148,6 @@ const Body = () => {
 export default Body;
 ```
 
-> [part 4 - MUI](https://github.com/rosealexander/react-mui-workshop/tree/part4-MUI)
+> [part 4 - MUI](https://github.com/rosealexander/react-mui-workshop/tree/part4)
 
-___
-
-![CSUN ACM Logo <](./acm_logo.png)
-*This workshop has been put together for the ACM California State University Northridge Student Chapter.*
-- [https://csunacm.org](https://csunacm.org)
-- [https://www.acm.org](https://www.acm.org)
-- [https://www.csun.edu/engineering-computer-science/computer-science](https://www.csun.edu/engineering-computer-science/computer-science)
 ___
