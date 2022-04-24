@@ -1,6 +1,6 @@
 + [Part 1 - React + MUI baseline](https://github.com/rosealexander/react-mui-workshop/tree/part1-react+mui-baseline)
 > **Part 2 - useState and useContext hooks**
-+ [part 3 - useEffect and useMemo hooks](https://github.com/rosealexander/react-mui-workshop/tree/part3-useEffect+useMemo)
++ [part 3 - useEffect hook](https://github.com/rosealexander/react-mui-workshop/tree/part3-useEffect)
 + [part 4 - MUI component library](https://github.com/rosealexander/react-mui-workshop/tree/part4-MUI)
 
 ___
@@ -252,6 +252,6 @@ const setTheme = useContext(ThemeContext)
 ```
 Now we can use **setTheme** in **ThemeToggle** without having to pass it as props. Check that your toggle switch is 
 still working and continue to 
-[part 3](https://github.com/rosealexander/react-mui-workshop/tree/part3-useEffect+useMemo).
+[part 3](https://github.com/rosealexander/react-mui-workshop/tree/part3-useEffect).
 
->[part 3 - useEffect and useMemo hooks](https://github.com/rosealexander/react-mui-workshop/tree/part3-useEffect+useMemo)
+>[part 3 - useEffect hook](https://github.com/rosealexander/react-mui-workshop/tree/part3-useEffect)
