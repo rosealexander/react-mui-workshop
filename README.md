@@ -15,8 +15,8 @@ ___
 
 ### Requirements
 To get the most out of this workshop you should be comfortable programming with Javascript.
-You must have [Node.js](https://nodejs.org/en/) installed and make sure to [clone this repo](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
-if you want to follow along.
+You must have [Node.js](https://nodejs.org/en/) installed and make sure to 
+[clone this repo](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
 
 You also need to grab a free API key from [OpenWeather](https://openweathermap.org/api).
 Create an account and navigate to [My Api Keys](https://home.openweathermap.org/api_keys)
@@ -39,11 +39,11 @@ You can find the React documentation [here](https://reactjs.org/docs)
 and check out the [Getting Started](https://reactjs.org/docs/getting-started.html) page for a quick overview.
 
 ### [Material UI](https://mui.com)
-MUI is a simple and customizable component library to build faster, beautiful, and more accessible React applications.
+"MUI is a simple and customizable component library to build faster, beautiful, and more accessible React applications".
 MUI components follow the [Material Design](https://material.io/design/introduction) system.
 
 ### Learn More
-- You can learn more about React and Material UI from the [React documentation](https://reactjs.org/)
+- You can learn more about React from the [React documentation](https://reactjs.org/)
 and [MUI v5 documentation](https://mui.com/getting-started/installation/).
 - To learn more about Material Design take a look at [material.io](https://material.io/design).
 > [continue to Part 1 - React + MUI template](https://github.com/rosealexander/react-mui-workshop/tree/part1)
