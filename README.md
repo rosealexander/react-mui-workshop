@@ -3,7 +3,7 @@
 > **part 3 - fetch API and useEffect hook**
 + [part 4 - MUI](https://github.com/rosealexander/react-mui-workshop/tree/part4)
 ___
-We are going to use the API key we created from OpenWeather to fetch weather data for our web app.
+We are going to use the API key you created from OpenWeather to fetch weather data.
 
 If you haven't done so yet, grab a free API key from [OpenWeather](https://openweathermap.org/api).
 Create an account and navigate to [My Api Keys](https://home.openweathermap.org/api_keys)
@@ -12,16 +12,16 @@ and generate a key named `react-mui-demo`
 ### [.env](https://create-react-app.dev/docs/adding-custom-environment-variables/)
 Once you have your api key, create a new file in the project root directory named `.env`.
 
-Inside this file, copy the following line and replace with your own OpenWeather api key:
+Inside this file, copy the following line and replace `{YOUR API KEY}` with your own OpenWeather api key:
 `REACT_APP_OPENWEATHER_API_KEY={YOUR API KEY}`
 
 Create React App can use `.env` files out of the box to keep global secrets. You must always prefix your environment 
-variable names with `REACT_APP` for them to be usable in your React application that was bootstrapped this way. 
+variable names with `REACT_APP` to use them in your *Create React App* application. 
 
-Restart your local dev environment by exiting the command line and running `nmp start` again.
+Restart your local dev environment by exiting the command line and running `nmp start` once again.
 
 ### [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
-We will use the JavaScript fetch API to make a request to OpenWeather for some weather data. Open up **body.jsx** and
+To make an API call to OpenWeather, to get some weather data, we can use the JavaScript fetch API. Open up **body.jsx** and
 add the following function.
 
 ```jsx
@@ -35,13 +35,12 @@ const fetchWeather = async (areaCode) => {
 const Body =() => null
 ...
 ```
-We are calling fetch, by default this makes a `GET` request to the url that we have provided. openWeatherUrl consists of
-our api key and an area code to return weather data from. fetch is an
+Calling fetch by default makes a `GET` request to the url provided. **fetch** is an
 [async function,](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) so we 
-prefix it with **await** and since we are using await inside **fetchWeather**, we include **async** in our function 
-signature. 
+need to prefix it with **await**. Since we are using await inside **fetchWeather**, we also include **async** in our 
+function signature. 
 
-Lastly, we use the built-in function **res.json()** to translate the body of this response into **JSON** and return it.
+Lastly, we use the built-in function **res.json()** to translate the body of the response into **JSON** and return it.
 
 ### [useEffect](https://reactjs.org/docs/hooks-reference.html#useeffect)
 We are going to call **fetchWeather** once the page loads for the first time. To do this, we need to use the 
@@ -51,8 +50,8 @@ We are going to call **fetchWeather** once the page loads for the first time. To
 useEffect(callback, [foo, bar, baz]);
 ```
 **useEffect** executes a callback whenever any value in its second argument is changed. This can be any stateful 
-element. If this second argument is excluded, useEffect will be called anytime any state changes in our React app.
-Since we only want to call **fetchWeather** as soon as the **Body** component loads, we can include an empty array.
+element. Since we only want to call **fetchWeather** as soon as the **Body** component loads, we will make this an 
+empty array.
 
 Replace body.jsx with the following:
 ```jsx
@@ -78,7 +77,7 @@ export default Body;
 ```
 Open up your browser's dev tools and reload the page to see the requested data in your browsers console.
 
-Now lets save our weather data with **useState**. Replace **Body.jsx** with the following:
+Next, lets store our weather data with **useState**. Replace **Body.jsx** with the following:
 
 ```jsx
 // body.jsx
@@ -104,13 +103,13 @@ const Body = () => {
 export default Body;
 ```
 
-### [memo*](https://reactjs.org/docs/hooks-reference.html#memo)
+### [memo](https://reactjs.org/docs/hooks-reference.html#memo)
 Notice how clicking on **ThemeToggle** causes an additional api call to OpenWeather.
-This is because changing our theme state in **App.js** is causing the **Body** component to rerender since it is a child
-component of App.js. To avoid this we can wrap the **Body** component in **memo**.
+This is because changing our theme state in **App.js** is causing the **Body** component to re-render. 
+To avoid this we can wrap the **Body** component in **memo**.
 
 [React.memo](https://reactjs.org/docs/react-api.html#reactmemo) is a 
-[higher order component](https://reactjs.org/docs/higher-order-components.html) and ensures that the **Body** component
+[higher order component](https://reactjs.org/docs/higher-order-components.html) and ensures that a component
 will only re-render if it has had some internal state change.
 
 Replace this line in **body.jsx**:
@@ -148,6 +147,6 @@ const Body = () => {
 export default Body;
 ```
 
-> [part 4 - MUI](https://github.com/rosealexander/react-mui-workshop/tree/part4)
+> [continue to part 4 - MUI](https://github.com/rosealexander/react-mui-workshop/tree/part4)
 
 ___
