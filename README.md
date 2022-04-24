@@ -107,6 +107,8 @@ setArray([1, 2, 3]) // array is now assigned [1,2,3]
 Open up **App.js** once again and add the following:
 ```jsx
 ...
+import {useState} from "react";
+
 function App() {
     const [theme, setTheme] = useState(lightTheme)
 ...
@@ -152,6 +154,7 @@ const Header = ({setTheme}) => {
 Finally, **setTheme** is available inside our **ThemeToggle** component. Replace **ThemeToggle.jsx** with the following:
 ```jsx
 // ThemeToggle.jsx
+import {Switch} from "@mui/material";
 import {lightTheme, darkTheme} from "./theme.js"
 
 const ThemeToggle = ({setTheme}) => {
@@ -176,12 +179,10 @@ If you take another look at the dev environment on [localhost:3000](http://local
 component you will see that it switches between **lightTheme** and **darkTheme**.
 ___
 ## [useContext](https://reactjs.org/docs/hooks-reference.html#usecontext)
-There is a better way.
-If we want to avoid prop drilling we can use the **createContext** hook to help us pass **setTheme** 
-from **App.js** to **ThemeToggle**. Remove the changes that we made to **Layout.jsx** and 
+There is a better way to do this. If we want to avoid prop drilling we can use the **createContext** hook to help us 
+pass **setTheme** from **App.js** to **ThemeToggle**. Remove the changes that we made to **Layout.jsx** and 
 **Header.jsx** and then replace **App.js** with the following:
 ```jsx
-// App.js
 import Layout from "./features/Layout";
 import {ThemeProvider} from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -196,7 +197,7 @@ function App() {
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline />
-            <ThemeContext.Provider value={setTheme}>
+            <ThemeContext.Provider value={[theme, setTheme]}>
                 <Layout />
             </ThemeContext.Provider>
         </ThemeProvider>
@@ -217,7 +218,7 @@ Next, we use `<ThemeContext.Provider value={someValue}>` to wrap the components 
 
 We want **Layout** and all of its children to have access to **setTheme()** :
 ```jsx
-<ThemeContext.Provider value={setTheme}>
+<ThemeContext.Provider value={[theme, setTheme]}>
     <Layout />
 </ThemeContext.Provider>
 ```
@@ -231,7 +232,7 @@ import lightTheme, {darkTheme} from "./theme";
 import {ThemeContext} from "../../App";
 
 const ThemeToggle = () => {
-    const setTheme = useContext(ThemeContext)
+    const [theme, setTheme] = useContext(ThemeContext)
 
     return (
         <Switch
