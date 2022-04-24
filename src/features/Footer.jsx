@@ -20,15 +20,14 @@ const Footer = () => {
                     </Typography>
                 </Grid>
                 <Grid item>
-                    <a
+                    <IconButton
+                        component='a'
                         target="_blank"
                         href="https://github.com/rosealexander/react-mui-workshop"
                         rel="noreferrer"
                     >
-                        <IconButton>
-                            <GitHubIcon />
-                        </IconButton>
-                    </a>
+                        <GitHubIcon />
+                    </IconButton>
                 </Grid>
             </Grid>
         </Box>
