@@ -1,5 +1,6 @@
 import ThemeToggle from "./theme/ThemeToggle";
-import {AppBar, Avatar, Grid, Typography} from "@mui/material";
+import {AppBar, Avatar, Grid, Icon, IconButton, Typography} from "@mui/material";
+import {SiMaterialui, SiReact} from "react-icons/si";
 
 const Header = () => {
     return (
@@ -19,23 +20,42 @@ const Header = () => {
                         spacing={1}
                     >
                         <Grid item>
-                            <a
-                                target="_blank"
-                                href="https://csunacm.org"
-                                rel="noreferrer"
+                            <Grid
+                                container
+                                wrap='nowrap'
+                                alignItems='center'
                             >
-                                <Avatar
-                                    src={'acm_logo.png'}
-                                />
-                            </a>
-                        </Grid>
-                        <Grid item>
-                            <Typography
-                                variant="caption"
-                                color="textSecondary"
-                            >
-                                React + Material UI
-                            </Typography>
+                                <Grid item>
+                                    <IconButton
+                                        size='large'
+                                        component='a'
+                                        target="_blank"
+                                        href="https://reactjs.org/"
+                                        rel="noreferrer"
+                                    >
+                                        <SiReact color={'#54d0fa'}/>
+                                    </IconButton>
+                                </Grid>
+                                <Grid item>
+                                    <Typography
+                                        color='primary'
+                                        fontWeight='Bold'
+                                    >
+                                        +
+                                    </Typography>
+                                </Grid>
+                                <Grid item>
+                                    <IconButton
+                                        size='large'
+                                        component='a'
+                                        target="_blank"
+                                        href="https://mui.com/"
+                                        rel="noreferrer"
+                                    >
+                                        <SiMaterialui color={'#2a82fe'}/>
+                                    </IconButton>
+                                </Grid>
+                            </Grid>
                         </Grid>
                     </Grid>
                 </Grid>
