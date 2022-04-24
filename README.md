@@ -4,7 +4,7 @@
 > #### An introdcution to using React with the Material UI component library.
 ![React + Material UI logos](./react_mui.png)
 
-#### Here is what we are going to build: [https://rosealexander.github.io/react-mui-workshop/](https://rosealexander.github.io/react-mui-workshop/)
+### Here is what we are going to build: [https://rosealexander.github.io/react-mui-workshop/](https://rosealexander.github.io/react-mui-workshop/)
 ___
 
 ### React.js
