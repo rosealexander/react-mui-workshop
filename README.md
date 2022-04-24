@@ -6,19 +6,19 @@ ___
 We are going to use the API key you created from OpenWeather to fetch weather data.
 
 If you haven't done so yet, grab a free API key from [OpenWeather](https://openweathermap.org/api).
-Create an account and navigate to [My Api Keys](https://home.openweathermap.org/api_keys)
-and generate a key named `react-mui-demo`
+Create an account and navigate to [Api Keys](https://home.openweathermap.org/api_keys)
+and copy your default API key.
 
 ### [.env](https://create-react-app.dev/docs/adding-custom-environment-variables/)
 Once you have your api key, create a new file in the project root directory named `.env`.
 
-Inside this file, copy the following line and replace `{YOUR API KEY}` with your own OpenWeather api key:
-`REACT_APP_OPENWEATHER_API_KEY={YOUR API KEY}`
+Inside this file, copy the following line and replace `YOUR API KEY` with your own OpenWeather api key. \
+`REACT_APP_OPENWEATHER_API_KEY=YOUR API KEY`
 
 Create React App can use `.env` files out of the box to keep global secrets. You must always prefix your environment 
 variable names with `REACT_APP` to use them in your *Create React App* application. 
 
-Restart your local dev environment by exiting the command line and running `nmp start` once again.
+Restart your local dev environment by exiting the command line and running `npm start` once again.
 
 ### [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 To make an API call to OpenWeather, to get some weather data, we can use the JavaScript fetch API. Open up **body.jsx** and
@@ -32,7 +32,7 @@ const fetchWeather = async (areaCode) => {
     return res.json()
 };
 
-const Body =() => null
+const Body = () => null
 ...
 ```
 Calling fetch by default makes a `GET` request to the url provided. **fetch** is an
@@ -112,12 +112,15 @@ To avoid this we can wrap the **Body** component in **memo**.
 [higher order component](https://reactjs.org/docs/higher-order-components.html) and ensures that a component
 will only re-render if it has had some internal state change.
 
-Replace this line in **body.jsx**:
+Replace these lines in **Body.jsx**:
 ```jsx
 // body.jsx
+import {memo, useEffect, useState} from "react";
 ...
+
 const Body = memo(() => {
 ...
+    
 });
 ```
 Now try switching between dark and light mode and notice that we aren't making any unnecessary api calls to OpenWeather.
@@ -125,7 +128,7 @@ Now try switching between dark and light mode and notice that we aren't making a
 Finally, body.jds should look like this:
 ```jsx
 // body.jsx
-import {useEffect, useState} from "react";
+import {memo, useEffect, useState} from "react";
 
 const fetchWeather = async (areaCode) => {
     const openWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?zip=${areaCode}&units=imperial&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}`
@@ -133,7 +136,7 @@ const fetchWeather = async (areaCode) => {
     return res.json()
 };
 
-const Body = () => {
+const Body = memo(() => {
     const [weatherData, setWeatherData] = useState({})
     console.log(weatherData)
 
@@ -142,11 +145,11 @@ const Body = () => {
     }, []);
 
     return null
-};
+});
 
 export default Body;
 ```
 
-> [continue to part 4 - MUI](https://github.com/rosealexander/react-mui-workshop/tree/part4)
 
+> #### Use `git checkout part4` to continue to [part 4 - MUI](https://github.com/rosealexander/react-mui-workshop/tree/part4)
 ___
